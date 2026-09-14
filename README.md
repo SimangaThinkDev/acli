@@ -1,4 +1,4 @@
 # acli
 
-### Duplicating the logic local AI agents use to talk to our computers. From scratch
+### Duplicating the logic cloud AI agents use to talk to our computers. From scratch
 
