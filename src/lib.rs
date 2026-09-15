@@ -19,9 +19,9 @@ pub async fn run() -> Result<(), Box<dyn std::error::Error>> {
 	    &full_prompt
         ).await?;
 
-	let clean_response = extract_content::extract(response.as_str())?;
+	let clean_response = extract_content::extract(&response)?;
 
-	println!(">> {}\n\nType `exit` to leave the program (case sensitive)", response);
+	println!(">> {}\n\nType `exit` to leave the program (case sensitive)", clean_response);
         
         // Add user prompt to context
 	context.push_str(&format!("\n{}", prompt));
