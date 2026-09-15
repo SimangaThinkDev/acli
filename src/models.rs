@@ -1,5 +1,7 @@
 use serde::Deserialize;
 
+
+
 #[derive(Deserialize)]
 pub struct Interaction {
     pub steps: Vec<Step>,
@@ -17,3 +19,4 @@ pub struct Step {
 pub struct Content {
     pub text: Option<String>,
 }
+
