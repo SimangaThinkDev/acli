@@ -33,15 +33,5 @@ pub async fn run() -> Result<(), Box<dyn std::error::Error>> {
 	prompt = input::get_str(None);
     }
 
-    // TODO: Parse output
-
-
-// OLD TEST CODE
-//    let response = gemini::generate_response(
-//	"Say Yes if you succesfully got this request, Respond only in JSON {\"Answer\":\"{Yes/No}\"}"
-//    ).await?;
-
-//    println!("{}", response);
-
     Ok(())
 }
