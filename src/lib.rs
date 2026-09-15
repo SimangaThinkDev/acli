@@ -5,6 +5,8 @@ pub mod models;
 pub mod input;
 pub mod extract_content;
 
+use colored::Colorize;
+
 pub async fn run() -> Result<(), Box<dyn std::error::Error>> {
 
     // Let's try prompting the user using predfined functions
@@ -20,8 +22,8 @@ pub async fn run() -> Result<(), Box<dyn std::error::Error>> {
         ).await?;
 
 	let clean_response = extract_content::extract(&response)?;
-
-	println!(">> {}\n\nType `exit` to leave the program (case sensitive)", clean_response);
+	
+	println!(">> {}\n\n{}", clean_response.blue(), "Type `exit` to leave the program (case sensitive)".red());
         
         // Add user prompt to context
 	context.push_str(&format!("\n{}", prompt));
